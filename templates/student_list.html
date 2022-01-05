@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta Class="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List View</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Class</td>
+            <td>Action</td>
+        </tr>
+        {% for s in object_list %}
+        <tr>
+            <td>{{s.name}}</td>
+            <td>{{s.join_class_list}}</td>
+            <td><a href="{{s.get_delete_url}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>
